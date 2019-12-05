@@ -87,7 +87,7 @@
         "command": "-workbench.view.scm"
     },
     {
-        "key": "cmd+.",
+        "key": "alt+v",
         "command": "editor.emmet.action.splitJoinTag"
     },
     {
@@ -150,11 +150,11 @@
         "command": "emmet.expandAbbreviation"
     },
     {
-        "key": "cmd+l",
+        "key": "alt+f",
         "command": "editor.emmet.action.nextEditPoint"
     },
     {
-        "key": "cmd+h",
+        "key": "alt+a",
         "command": "editor.emmet.action.prevEditPoint"
     },
     {
@@ -281,5 +281,51 @@
         "key": "cmd+f12",
         "command": "-editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "scrollPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+pagedown",
+        "command": "-scrollPageDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "scrollPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+pageup",
+        "command": "-scrollPageUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "gotoNextPreviousMember.nextMember"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "-gotoNextPreviousMember.nextMember"
+    },
+    {
+        "key": "alt+a",
+        "command": "gotoNextPreviousMember.previousMember"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "-gotoNextPreviousMember.previousMember"
+    },
+    {
+        "key": "alt+d",
+        "command": "bracket-select.select",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+a",
+        "command": "-bracket-select.select",
+        "when": "editorTextFocus"
     }
 ]
