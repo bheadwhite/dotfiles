@@ -2,14 +2,11 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Monokai",
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "files.autoSave": "afterDelay",
     "window.zoomLevel": 1,
     "editor.tabSize": 2,
     "editor.quickSuggestions": false,
     "terminal.integrated.cwd": "/Users/brent.whitehead/Projects/neo",
     "editor.parameterHints.enabled": false,
-    "typescript.tsserver.maxTsServerMemory": 6134,
-    "editor.minimap.scale": 2,
     "multiCommand.commands": [
         {
             "command": "multiCommand.openInEditor",
@@ -19,10 +16,10 @@
             ]
         },
     ],
-    "files.associations": {
-        "*.tsx": "typescriptreact",
-        "*.jsx": "javascriptreact"
-    },
+    // "files.associations": {
+    //     "*.tsx": "typescriptreact",
+    //     "*.jsx": "javascriptreact"
+    // },
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.minimap.enabled": false,
     "prettier.jsxBracketSameLine": true,
@@ -33,10 +30,9 @@
     "workbench.editor.showTabs": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
-        "typescript": "javascriptreact",
+        "typescript": "typescriptreact",
         "jsx-sublime-babel-tags": "javascriptreact"
     },
-    "emmet.triggerExpansionOnTab": true,
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true,
@@ -49,14 +45,8 @@
         "_build": true,
         "deps": true
     },
-    "selectby.regexes": {
-        "regex1": {
-            "flags": "im",
-            "backward": "'",
-            "forward": ".*",
-            "moveby": "[\\(|{|]"
-        }
-    },
+    "editor.formatOnSave": true,
+    "git.autofetch": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -136,6 +126,5 @@
                 }
             }
         ]
-    },
-    "git.autofetch": true
+    }
 }

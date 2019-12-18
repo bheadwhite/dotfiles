@@ -87,11 +87,11 @@
         "command": "-workbench.view.scm"
     },
     {
-        "key": "alt+v",
+        "key": "alt+cmd+v",
         "command": "editor.emmet.action.splitJoinTag"
     },
     {
-        "key": "alt+e",
+        "key": "cmd+;",
         "command": "editor.emmet.action.expandAbbreviation"
     },
     {
@@ -146,8 +146,9 @@
         "command": "-workbench.action.navigateToLastEditLocation"
     },
     {
-        "key": "cmd+;",
-        "command": "emmet.expandAbbreviation"
+        "key": "alt+e",
+        "command": "emmet.expandAbbreviation",
+        "when": "editorReadOnly"
     },
     {
         "key": "alt+f",
@@ -195,26 +196,6 @@
     {
         "key": "alt+left",
         "command": "-cursorWordStartLeft",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+l",
-        "command": "cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+right",
-        "command": "-cursorEnd",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+h",
-        "command": "cursorHome",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+left",
-        "command": "-cursorHome",
         "when": "textInputFocus"
     },
     {
@@ -327,5 +308,107 @@
         "key": "alt+a",
         "command": "-bracket-select.select",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+t",
+        "command": "extension.codeSelectUntil"
+    },
+    {
+        "key": "shift+j",
+        "command": "scrollLineDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-scrollLineDown",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+k",
+        "command": "scrollLineUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-scrollLineUp",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+k .",
+        "command": "extension.embraceAngleBrackets"
+    },
+    {
+        "key": "cmd+k shift+]",
+        "command": "extension.embraceCurlyBrackets"
+    },
+    {
+        "key": "cmd+k shift+'",
+        "command": "extension.embraceDoubleQuotes"
+    },
+    {
+        "key": "cmd+k shift+0",
+        "command": "extension.embraceParenthesis"
+    },
+    {
+        "key": "cmd+k '",
+        "command": "extension.embraceSingleQuotes"
+    },
+    {
+        "key": "cmd+k ]",
+        "command": "extension.embraceSquareBrackets"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "goToPreviousReference",
+        "when": "referenceSearchVisible"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-goToPreviousReference",
+        "when": "referenceSearchVisible"
+    },
+    {
+        "key": "alt+d",
+        "command": "editor.emmet.action.selectNextItem"
+    },
+    {
+        "key": "cmd+l",
+        "command": "cursorEndSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+cmd+right",
+        "command": "-cursorEndSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "cursorHomeSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+cmd+left",
+        "command": "-cursorHomeSelect",
+        "when": "textInputFocus"
     }
 ]
