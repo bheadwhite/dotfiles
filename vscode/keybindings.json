@@ -264,26 +264,6 @@
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "ctrl+j",
-        "command": "scrollPageDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+pagedown",
-        "command": "-scrollPageDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "scrollPageUp",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "cmd+pageup",
-        "command": "-scrollPageUp",
-        "when": "textInputFocus"
-    },
-    {
         "key": "alt+f",
         "command": "gotoNextPreviousMember.nextMember"
     },
@@ -314,23 +294,13 @@
         "command": "extension.codeSelectUntil"
     },
     {
-        "key": "shift+j",
+        "key": "ctrl+j",
         "command": "scrollLineDown",
         "when": "textInputFocus"
     },
     {
         "key": "ctrl+pagedown",
         "command": "-scrollLineDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+k",
-        "command": "scrollLineUp",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+pageup",
-        "command": "-scrollLineUp",
         "when": "textInputFocus"
     },
     {
@@ -410,5 +380,40 @@
         "key": "shift+cmd+left",
         "command": "-cursorHomeSelect",
         "when": "textInputFocus"
-    }
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus && hasSearchResult"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "alt+l",
+        "command": "list.expand",
+        "when": "listFocus && !inputFocus"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "scrollLineUp",
+        "when": "editorFocus"
+      }
 ]
