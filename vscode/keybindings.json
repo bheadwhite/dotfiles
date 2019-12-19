@@ -39,7 +39,7 @@
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "alt+cmd+l",
+        "key": "shift+cmd+l",
         "command": "workbench.action.nextEditor"
     },
     {
@@ -51,7 +51,7 @@
         "command": "-workbench.action.nextEditor"
     },
     {
-        "key": "alt+cmd+h",
+        "key": "shift+cmd+h",
         "command": "workbench.action.previousEditor"
     },
     {
@@ -59,7 +59,7 @@
         "command": "-workbench.action.previousEditor"
     },
     {
-        "key": "alt+cmd+right",
+        "key": "shift+cmd+k",
         "command": "workbench.action.moveEditorToNextGroup"
     },
     {
@@ -67,7 +67,7 @@
         "command": "-workbench.action.moveEditorToNextGroup"
     },
     {
-        "key": "alt+cmd+left",
+        "key": "shift+cmd+j",
         "command": "workbench.action.moveEditorToPreviousGroup"
     },
     {
@@ -133,7 +133,7 @@
         "command": "explorer.newFile"
     },
     {
-        "key": "cmd+enter",
+        "key": "alt+enter",
         "command": "multiCommand.openInEditor",
         "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
     },
@@ -382,7 +382,7 @@
         "when": "textInputFocus"
     },
     {
-        "key": "shift+cmd+l",
+        "key": "shift+cmd+a",
         "command": "editor.action.selectHighlights",
         "when": "editorFocus && hasSearchResult"
     },
