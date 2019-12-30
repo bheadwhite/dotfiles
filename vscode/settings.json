@@ -2,11 +2,11 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "One Monokai",
     "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#fafafa",
-        "editor.rangeHighlightBackground": "#fafafa",
+        "editor.selectionBackground": "#ffffff23",
+        "editor.rangeHighlightBackground": "#ffffff23",
         "editor.wordHighlightStrongBackground": "#3e4998",
         "editor.wordHighlightBackground": "#3e4998",
-        "editor.hoverHighlightBackground": "#00ff00",
+        // "editor.hoverHighlightBackground": "#00ff00",
         "editor.findMatchHighlightBackground": "#963b3b",
         "editor.selectionForeground": "#99eeff"
     },
@@ -135,5 +135,6 @@
                 }
             }
         ]
-    }
+    },
+    "diffEditor.ignoreTrimWhitespace": false
 }
