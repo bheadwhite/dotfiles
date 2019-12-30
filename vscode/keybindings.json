@@ -429,5 +429,15 @@
         "key": "enter",
         "command": "list.select",
         "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+h",
+        "command": "cursorHome",
+        "when": "textInputFocus"
     }
 ]
