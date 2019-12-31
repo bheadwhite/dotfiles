@@ -7,7 +7,9 @@
         "editor.wordHighlightStrongBackground": "#3e4998",
         "editor.wordHighlightBackground": "#3e4998",
         // "editor.hoverHighlightBackground": "#00ff00",
-        "editor.findMatchHighlightBackground": "#963b3b",
+        "editor.findMatchBackground": "#282c34",
+        "editor.findMatchBorder": "#ff0000",
+        "editor.findMatchHighlightBackground": "#0b790e97",
         "editor.selectionForeground": "#99eeff"
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
@@ -25,6 +27,7 @@
             ]
         },
     ],
+    "workbench.editor.enablePreview": false,
     // "files.associations": {
     //     "*.tsx": "typescriptreact",
     //     "*.jsx": "javascriptreact"
