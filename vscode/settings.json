@@ -27,7 +27,7 @@
             ]
         },
     ],
-    "workbench.editor.enablePreview": false,
+    // "workbench.editor.enablePreview": false,
     // "files.associations": {
     //     "*.tsx": "typescriptreact",
     //     "*.jsx": "javascriptreact"
@@ -141,5 +141,7 @@
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "go.formatTool": "goimports",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }

@@ -469,5 +469,17 @@
     "key": "alt+shift+enter",
     "command": "breadcrumbs.revealFocused",
     "when": "breadcrumbsActive && breadcrumbsVisible"
-  } 
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "opened.editors"
+  },
+  {
+    "key": "cmd+k s",
+    "command": "surround.with.element"
+  },
+  {
+    "key": "cmd+k shift+9",
+    "command": "extension.embraceParenthesis"
+  }
 ]
