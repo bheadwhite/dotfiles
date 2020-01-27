@@ -540,7 +540,7 @@
     "command": "extension.embraceParenthesis"
   },
   {
-    "key": "cmd+i",
+    "key": "alt+i",
     "command": "extension.addOpenAsideToContextMenu",
     "when": "editorTextFocus"
   },
@@ -595,12 +595,12 @@
   {
     "key": "alt+l",
     "command": "editor.emmet.action.selectNextItem",
-    "when": "!extension.simpleVim.insertMode"
+    "when": "!extension.simpleVim.insertMode && editorTextFocus"
   },
   {
     "key": "alt+h",
     "command": "editor.emmet.action.selectPrevItem",
-    "when": "!extension.simpleVim.insertMode"
+    "when": "!extension.simpleVim.insertMode && editorTextFocus"
   },
   {
     "key": "alt+k",
@@ -610,12 +610,12 @@
   {
     "key": "alt+k",
     "command": "gotoNextPreviousMember.previousMember",
-    "when": "extension.simpleVim.normalMode"
+    "when": "extension.simpleVim.normalMode && editorTextFocus"
   },
   {
     "key": "alt+j",
     "command": "gotoNextPreviousMember.nextMember",
-    "when": "extension.simpleVim.normalMode "
+    "when": "extension.simpleVim.normalMode && editorTextFocus"
   },
   {
     "key": "alt+j",
@@ -626,6 +626,16 @@
     "key": "cmd+shift+z",
     "command": "redo",
     "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  },
+  {
+    "key": "cmd+i",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   }
 
 ]
