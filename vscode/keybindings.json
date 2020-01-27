@@ -472,7 +472,8 @@
   },
   {
     "key": "shift+alt+h",
-    "command": "workbench.action.focusLeftGroup"
+    "command": "workbench.action.focusLeftGroup",
+    "when": "!breadcrumbsActive"
   },
   {
     "key": "cmd+k cmd+left",
@@ -480,7 +481,8 @@
   },
   {
     "key": "shift+alt+l",
-    "command": "workbench.action.focusRightGroup"
+    "command": "workbench.action.focusRightGroup",
+    "when": "!breadcrumbsActive"
   },
   {
     "key": "cmd+k cmd+right",
