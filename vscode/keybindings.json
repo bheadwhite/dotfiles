@@ -622,5 +622,10 @@
     "command": "selectNextSuggestion",
     "when": "suggestWidgetVisible"
   },
+  {
+    "key": "cmd+shift+z",
+    "command": "redo",
+    "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  }
 
 ]
