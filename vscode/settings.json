@@ -143,5 +143,16 @@
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "macros.list": {
+        "selectInnerDblQuotes": [
+            {"command": "type", "args": {"text": "s"}},
+            {"command": "type", "args": {"text": "i"}},
+            {"command": "type", "args": {"text": "\""}},
+        ]
+    },
 }
