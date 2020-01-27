@@ -638,6 +638,27 @@
     "key": "f12",
     "command": "-editor.action.revealDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+shift+l",
+    "command": "cursorWordRightSelect",
+    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  },
+  {
+    "key": "alt+shift+h",
+    "command": "cursorWordLeftSelect",
+    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  },
+  {
+    "key": "cmd+shift+l",
+    "command": "cursorEndSelect",
+    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  },
+  {
+    "key": "cmd+shift+h",
+    "command": "cursorHomeSelect",
+    "when": "editorTextFocus && !extension.simpleVim.normalMode"
   }
+
 
 ]
