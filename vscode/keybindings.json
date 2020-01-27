@@ -610,12 +610,12 @@
   {
     "key": "alt+k",
     "command": "gotoNextPreviousMember.previousMember",
-    "when": "!extension.simpleVim.insertMode"
+    "when": "extension.simpleVim.normalMode"
   },
   {
     "key": "alt+j",
     "command": "gotoNextPreviousMember.nextMember",
-    "when": "!extension.simpleVim.insertMode"
+    "when": "extension.simpleVim.normalMode "
   },
   {
     "key": "alt+j",
