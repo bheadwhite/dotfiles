@@ -81,7 +81,7 @@
     "command": "-workbench.view.scm"
   },
   {
-    "key": "alt+cmd+v",
+    "key": "alt+v",
     "command": "editor.emmet.action.splitJoinTag"
   },
   {
@@ -587,12 +587,12 @@
   {
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly && !extension.simpleVim.normalMode"
+    "when": "editorTextFocus && editorTextFocus"
   },
   {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly && !extension.simpleVim.normalMode && !suggestWidgetVisible"
+    "when": "editorTextFocus && editorTextFocus && !suggestWidgetVisible"
   },
   {
     "key": "alt+l",
@@ -609,16 +609,16 @@
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible"
   },
-  {
-    "key": "alt+k",
-    "command": "gotoNextPreviousMember.previousMember",
-    "when": "extension.simpleVim.normalMode && editorTextFocus"
-  },
-  {
-    "key": "alt+j",
-    "command": "gotoNextPreviousMember.nextMember",
-    "when": "extension.simpleVim.normalMode && editorTextFocus"
-  },
+  // {
+  //   "key": "alt+k",
+  //   "command": "gotoNextPreviousMember.previousMember",
+  //   "when": "extension.simpleVim.normalMode && editorTextFocus"
+  // },
+  // {
+  //   "key": "alt+j",
+  //   "command": "gotoNextPreviousMember.nextMember",
+  //   "when": "extension.simpleVim.normalMode && editorTextFocus"
+  // },
   {
     "key": "alt+j",
     "command": "selectNextSuggestion",
@@ -644,21 +644,35 @@
     "command": "cursorWordRightSelect",
     "when": "editorTextFocus && !extension.simpleVim.normalMode"
   },
+  // {
+  //   "key": "alt+shift+h",
+  //   "command": "cursorWordLeftSelect",
+  //   "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  // },
+  // {
+  //   "key": "cmd+shift+l",
+  //   "command": "cursorEndSelect",
+  //   "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  // },
+  // {
+  //   "key": "cmd+shift+h",
+  //   "command": "cursorHomeSelect",
+  //   "when": "editorTextFocus && !extension.simpleVim.normalMode"
+  // },
   {
-    "key": "alt+shift+h",
-    "command": "cursorWordLeftSelect",
-    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+    "key": "alt+/",
+    "command": "surround.with.comment",
+    "when": "editorTextFocus"
   },
   {
-    "key": "cmd+shift+l",
-    "command": "cursorEndSelect",
-    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+    "key": "alt+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
   {
-    "key": "cmd+shift+h",
-    "command": "cursorHomeSelect",
-    "when": "editorTextFocus && !extension.simpleVim.normalMode"
+    "key": "alt+escape",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   }
-
 
 ]
