@@ -10,13 +10,12 @@
         "editor.findMatchBackground": "#282c34",
         "editor.findMatchBorder": "#ff0000",
         "editor.findMatchHighlightBackground": "#0b790e97",
-        "editor.selectionForeground": "#99eeff"
+        "editor.selectionForeground": "#99eeff",
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
     "window.zoomLevel": 1,
     "editor.tabSize": 2,
     "editor.quickSuggestions": false,
-    "terminal.integrated.cwd": "/Users/brent.whitehead/Projects/neo",
     "editor.parameterHints.enabled": false,
     "multiCommand.commands": [
         {
@@ -38,6 +37,7 @@
     "prettier.jsxSingleQuote": true,
     "prettier.semi": false,
     "prettier.tabWidth": 2,
+    "prettier.printWidth": 100,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "workbench.editor.showTabs": true,
     "emmet.includeLanguages": {
@@ -59,86 +59,6 @@
     },
     "editor.formatOnSave": true,
     "git.autofetch": true,
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "text.html.markdown.journal.task.open.bullet",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.open.marker",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.open.keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.open.text",
-                "settings": {}
-            },
-            {
-                "scope": "text.html.markdown.journal.task.completed.keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.completed.marker",
-                "settings": {
-                    "foreground": "#AAAAAA"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.completed.text",
-                "settings": {
-                    "foreground": "#AAAAAA"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.task.completed.bullet",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.memo.keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.memo.bullet",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.scope",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.link.keyword",
-                "settings": {
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": "text.html.markdown.journal.link.bullet",
-                "settings": {
-                    "foreground": "#FFFF00"
-                }
-            }
-        ]
-    },
     "diffEditor.ignoreTrimWhitespace": false,
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
@@ -153,6 +73,100 @@
             {"command": "type", "args": {"text": "s"}},
             {"command": "type", "args": {"text": "i"}},
             {"command": "type", "args": {"text": "\""}},
+        ],
+        "deleter": [
+            {"command": "settings.cycle.delete",},
+            {"command": "type", "args": {"text": "d"}}
         ]
+
     },
+    "settings.cycle": [{
+        "id": "delete",
+        "overrideWorkspaceSettings": true,
+        "values": [{
+            "titleBar.activeBackground": "#ff0000"
+        }
+        ]
+    }
+],
+"editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "scope": "text.html.markdown.journal.task.open.bullet",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.open.marker",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.open.keyword",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.open.text",
+            "settings": {}
+        },
+        {
+            "scope": "text.html.markdown.journal.task.completed.keyword",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.completed.marker",
+            "settings": {
+                "foreground": "#AAAAAA"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.completed.text",
+            "settings": {
+                "foreground": "#AAAAAA"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.task.completed.bullet",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.memo.keyword",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.memo.bullet",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.scope",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.link.keyword",
+            "settings": {
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "scope": "text.html.markdown.journal.link.bullet",
+            "settings": {
+                "foreground": "#FFFF00"
+            }
+        }
+    ]
+}
 }
