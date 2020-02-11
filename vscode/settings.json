@@ -17,6 +17,7 @@
     "editor.tabSize": 2,
     "editor.quickSuggestions": false,
     "editor.parameterHints.enabled": false,
+    "workbench.view.experimental.allowMovingToNewContainer": true,
     "multiCommand.commands": [
         {
             "command": "multiCommand.openInEditor",
@@ -168,5 +169,6 @@
             }
         }
     ]
-}
+},
+"diffEditor.renderSideBySide": false
 }

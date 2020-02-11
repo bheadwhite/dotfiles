@@ -165,7 +165,7 @@
   {
     "key": "alt+l",
     "command": "cursorWordEndRight",
-    "when": "textInputFocus && !extension.simpleVim.normalMode"
+    "when": "textInputFocus"
   },
   {
     "key": "alt+right",
@@ -175,7 +175,7 @@
   {
     "key": "alt+h",
     "command": "cursorWordStartLeft",
-    "when": "textInputFocus && !extension.simpleVim.normalMode"
+    "when": "textInputFocus"
   },
   {
     "key": "alt+left",
@@ -594,16 +594,6 @@
     "when": "editorTextFocus && editorTextFocus && !suggestWidgetVisible"
   },
   {
-    "key": "alt+l",
-    "command": "editor.emmet.action.selectNextItem",
-    "when": "!extension.simpleVim.insertMode && editorTextFocus"
-  },
-  {
-    "key": "alt+h",
-    "command": "editor.emmet.action.selectPrevItem",
-    "when": "!extension.simpleVim.insertMode && editorTextFocus"
-  },
-  {
     "key": "alt+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible"
@@ -662,5 +652,23 @@
     "key": "cmd+enter",
     "command": "workbench.view.explorer",
     "when": "explorerViewletFocus"
+  },
+  {
+    "key": "cmd+k shift+p",
+    "command": "git.push"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "git.revertChange"
+  },
+  {
+    "key": "cmd+k d",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+f3",
+    "command": "-editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
   }
 ]
