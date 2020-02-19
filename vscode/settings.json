@@ -170,5 +170,6 @@
         }
     ]
 },
-"diffEditor.renderSideBySide": false
+"diffEditor.renderSideBySide": true,
+"vsnotes.defaultNotePath": "/Users/brent.whitehead/Documents"
 }

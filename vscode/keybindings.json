@@ -670,5 +670,25 @@
     "key": "alt+f3",
     "command": "-editor.action.dirtydiff.next",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "extension.simpleVim.scrollDownHalfPage",
+    "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.simpleVim.scrollDownHalfPage",
+    "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "extension.simpleVim.scrollUpHalfPage",
+    "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-extension.simpleVim.scrollUpHalfPage",
+    "when": "editorTextFocus && !extension.simpleVim.insertMode"
   }
 ]
