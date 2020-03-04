@@ -29,7 +29,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+cmd+l",
+    "key": "ctrl+l",
     "command": "workbench.action.nextEditor"
   },
   {
@@ -41,7 +41,7 @@
     "command": "-workbench.action.nextEditor"
   },
   {
-    "key": "shift+cmd+h",
+    "key": "ctrl+h",
     "command": "workbench.action.previousEditor"
   },
   {
@@ -53,7 +53,7 @@
     "command": "-workbench.action.previousEditor"
   },
   {
-    "key": "shift+cmd+k",
+    "key": "ctrl+cmd+l",
     "command": "workbench.action.moveEditorToNextGroup"
   },
   {
@@ -61,7 +61,7 @@
     "command": "-workbench.action.moveEditorToNextGroup"
   },
   {
-    "key": "shift+cmd+j",
+    "key": "ctrl+cmd+h",
     "command": "workbench.action.moveEditorToPreviousGroup"
   },
   {
@@ -278,7 +278,7 @@
     "command": "extension.codeSelectUntil"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+down",
     "command": "scrollLineDown",
     "when": "textInputFocus"
   },
@@ -406,11 +406,6 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+k",
-    "command": "scrollLineUp",
-    "when": "editorFocus"
-  },
-  {
     "key": "alt+enter",
     "command": "list.select",
     "when": "listFocus && !inputFocus"
@@ -418,7 +413,7 @@
   {
     "key": "enter",
     "command": "list.select",
-    "when": "listFocus && !inputFocus"
+    "when": "listFocus && !inputFocus && !inDebugRepl"
   },
   {
     "key": "cmd+l",
@@ -641,7 +636,7 @@
   {
     "key": "enter",
     "command": "workbench.action.keepEditor",
-    "when": "textInputFocus && extension.simpleVim.normalMode"
+    "when": "textInputFocus && extension.simpleVim.normalMode && !inDebugRepl"
   },
   {
     "key": "shift+cmd+d",
@@ -672,7 +667,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+shift+down",
     "command": "extension.simpleVim.scrollDownHalfPage",
     "when": "editorTextFocus && !extension.simpleVim.insertMode"
   },
@@ -682,7 +677,7 @@
     "when": "editorTextFocus && !extension.simpleVim.insertMode"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "ctrl+shift+up",
     "command": "extension.simpleVim.scrollUpHalfPage",
     "when": "editorTextFocus && !extension.simpleVim.insertMode"
   },
@@ -690,5 +685,243 @@
     "key": "ctrl+u",
     "command": "-extension.simpleVim.scrollUpHalfPage",
     "when": "editorTextFocus && !extension.simpleVim.insertMode"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-extension.vertical-jump.cursorBlockFirstLine",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "-extension.vertical-jump.cursorBlockLastLine",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "-extension.vertical-jump.cursorBlockFirstLineSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+down",
+    "command": "-extension.vertical-jump.cursorBlockLastLineSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "indentation-level-movement.moveDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "-indentation-level-movement.moveDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "indentation-level-movement.moveUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "-indentation-level-movement.moveUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "indentation-level-movement.selectDown"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-indentation-level-movement.selectDown"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "indentation-level-movement.selectUp",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-indentation-level-movement.selectUp"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "scrollLineUp",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+k j",
+    "command": "macros.jumpActivate"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "-findJump.activate"
+  },
+  {
+    "key": "cmd+k shift+j",
+    "command": "macros.jumpSelectActivate"
+  },
+  {
+    "key": "cmd+m",
+    "command": "markJump.jumpToMarks"
+  },
+  {
+    "key": "ctrl+cmd+m",
+    "command": "-markJump.jumpToMarks"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+up",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "-workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "-workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+pagedown",
+    "command": "-workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+pageup",
+    "command": "-workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.splitInActiveWorkspace",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+alt+h",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },
+  {
+    "key": "shift+alt+l",
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.moveEditorLeftInGroup"
+  },{
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.moveEditorRightInGroup",
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "cmd+k down",
+    "command": "-workbench.action.moveActiveEditorGroupDown"
+  },
+  {
+    "key": "ctrl+cmd+k",
+    "command": "workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "cmd+k up",
+    "command": "-workbench.action.moveActiveEditorGroupUp"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "cmd+k cmd+up",
+    "command": "-workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "cmd+k cmd+down",
+    "command": "-workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.replaceInFiles",
+    "when": "explorerFocus"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "key": "alt+cmd+l",
+    "command": "workbench.action.focusNextGroup"
+  },
+  {
+    "key": "alt+cmd+h",
+    "command": "workbench.action.focusPreviousGroup"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]

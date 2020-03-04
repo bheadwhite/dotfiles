@@ -26,6 +26,12 @@
                 "workbench.action.moveEditorToPreviousGroup"
             ]
         },
+        {
+            "command": "multiCommand.jumpActivate",
+            "sequence": [
+                "type"
+            ]
+        }
     ],
     // "workbench.editor.enablePreview": false,
     // "files.associations": {
@@ -78,7 +84,16 @@
         "deleter": [
             {"command": "settings.cycle.delete",},
             {"command": "type", "args": {"text": "d"}}
-        ]
+        ],
+        "jumpActivate": [
+            {"command": "type", "args": {"text": "i"}},
+            "findJump.activate",
+        ],
+        "jumpSelectActivate": [
+            {"command": "type", "args": {"text": "i"}},
+            "findJump.activateWithSelection",
+            {"command": "type", "args": {"text": "v"}},
+        ],
 
     },
     "settings.cycle": [{
@@ -171,5 +186,9 @@
     ]
 },
 "diffEditor.renderSideBySide": true,
-"vsnotes.defaultNotePath": "/Users/brent.whitehead/Documents"
+"vsnotes.defaultNotePath": "/Users/brent.whitehead/Documents",
+"[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+},
+"scoper.highlightColor": ""
 }
