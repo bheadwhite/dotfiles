@@ -144,14 +144,6 @@
     "when": "editorReadOnly"
   },
   {
-    "key": "ctrl+shift+alt+cmd+j",
-    "command": "editor.emmet.action.nextEditPoint"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+k",
-    "command": "editor.emmet.action.prevEditPoint"
-  },
-  {
     "key": "alt+down",
     "command": "-editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
@@ -825,22 +817,6 @@
     "command": "workbench.action.moveEditorToBelowGroup"
   },
   {
-    "key": "ctrl+k",
-    "command": "workbench.action.focusAboveGroup"
-  },
-  {
-    "key": "cmd+k cmd+up",
-    "command": "-workbench.action.focusAboveGroup"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.focusBelowGroup"
-  },
-  {
-    "key": "cmd+k cmd+down",
-    "command": "-workbench.action.focusBelowGroup"
-  },
-  {
     "key": "shift+cmd+h",
     "command": "workbench.action.replaceInFiles",
     "when": "explorerFocus"
@@ -874,26 +850,6 @@
     "key": "shift+cmd+.",
     "command": "-breadcrumbs.focusAndSelect",
     "when": "breadcrumbsPossible"
-  },
-  {
-    "key": "cmd+k",
-    "command": "lineJumper.moveUp",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+up",
-    "command": "-lineJumper.moveUp",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "cmd+j",
-    "command": "lineJumper.moveDown",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+down",
-    "command": "-lineJumper.moveDown",
-    "when": "editorTextFocus"
   },
   {
     "key": "shift+cmd+j",
@@ -1120,16 +1076,6 @@
     "command": "-workbench.action.moveEditorRightInGroup"
   },
   {
-    "key": "ctrl+shift+alt+cmd+i",
-    "command": "editor.debug.action.showDebugHover",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
-    "key": "cmd+k cmd+i",
-    "command": "-editor.debug.action.showDebugHover",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
     "key": "ctrl+cmd+l",
     "command": "history.showNext"
   },
@@ -1161,5 +1107,19 @@
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+i",
+    "command": "editor.action.showDefinitionPreviewHover"
   },
 ]

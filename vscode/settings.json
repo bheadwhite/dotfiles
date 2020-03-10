@@ -190,5 +190,18 @@
 "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
 },
-"scoper.highlightColor": ""
+"scoper.highlightColor": "",
+"keyboard.touchbar.ignored": [
+    "play",
+    "workbench.action.debug.start",
+    "workbench.action.debug.run"
+],
+"touchBar.showActivityBar": true,
+"touchBar.rename": false,
+"touchBar.copyLinesDownAction": false,
+"touchBar.organizeImports": true,
+"touchBar.toggleZenMode": true,
+"touchBar.extensions": false,
+"touchBar.closeOtherEditors": false,
+"touchBar.terminal": true
 }
