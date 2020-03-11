@@ -583,7 +583,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+alt+cmd+tab",
+    "key": "alt+space",
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
