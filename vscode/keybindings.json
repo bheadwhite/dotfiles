@@ -122,8 +122,9 @@
     "command": "explorer.newFolder"
   },
   {
-    "key": "alt+cmd+n",
-    "command": "explorer.newFile"
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
   },
   {
     "key": "alt+enter",
@@ -961,7 +962,7 @@
     "command": "editor.emmet.action.selectPrevItem"
   },
   {
-    "key": "alt+.",
+    "key": "cmd+k cmd+i",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
@@ -1119,7 +1120,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+k cmd+i",
+    "key": "alt+i",
     "command": "editor.action.showDefinitionPreviewHover"
   },
 ]
