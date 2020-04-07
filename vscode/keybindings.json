@@ -260,7 +260,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space shift+.",
+    "key": "ctrl+alt+cmd+.",
     "command": "extension.embraceAngleBrackets"
   },
   {
@@ -268,7 +268,7 @@
     "command": "extension.embraceAngleBrackets"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space shift+[",
+    "key": "ctrl+alt+cmd+]",
     "command": "extension.embraceCurlyBrackets"
   },
   {
@@ -276,15 +276,11 @@
     "command": "extension.embraceCurlyBrackets"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space shift+'",
-    "command": "extension.embraceDoubleQuotes"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+space '",
+    "key": "ctrl+alt+cmd+'",
     "command": "extension.embraceSingleQuotes"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space ]",
+    "key": "ctrl+alt+cmd+[",
     "command": "extension.embraceSquareBrackets"
   },
   {
@@ -405,7 +401,7 @@
     "command": "opened.editors"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space e",
+    "key": "ctrl+alt+cmd+e",
     "command": "surround.with.element"
   },
   {
@@ -483,7 +479,7 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "ctrl+shift+alt+cmd+space shift+0",
+    "key": "ctrl+alt+cmd+0",
     "command": "extension.embraceParenthesis"
   },
   {
@@ -1122,5 +1118,39 @@
   {
     "key": "alt+i",
     "command": "editor.action.showDefinitionPreviewHover"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+k",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus && extension.simpleVim.visualMode"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "-editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+j",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus && extension.simpleVim.visualMode"
+  },
+  {
+    "key": "ctrl+shift+cmd+left",
+    "command": "-editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+j",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus && extension.simpleVim.visualLineMode"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+k",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus && extension.simpleVim.visualLineMode"
+  },
+  {
+    "key": "ctrl+alt+cmd+r",
+    "command": "surround.with.region"
   },
 ]

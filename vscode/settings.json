@@ -13,7 +13,7 @@
         "editor.selectionForeground": "#99eeff",
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "editor.tabSize": 2,
     "editor.quickSuggestions": false,
     "editor.parameterHints.enabled": false,
@@ -202,5 +202,7 @@
 "touchBar.toggleZenMode": true,
 "touchBar.extensions": false,
 "touchBar.closeOtherEditors": false,
-"touchBar.terminal": true
+"touchBar.terminal": true,
+"workbench.activityBar.visible": false,
+"typescript.updateImportsOnFileMove.enabled": "always"
 }
