@@ -1,43 +1,21 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "One Monokai",
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#ffffff23",
         "editor.rangeHighlightBackground": "#ffffff23",
         "editor.wordHighlightStrongBackground": "#3e4998",
         "editor.wordHighlightBackground": "#3e4998",
-        // "editor.hoverHighlightBackground": "#00ff00",
         "editor.findMatchBackground": "#282c34",
         "editor.findMatchBorder": "#ff0000",
         "editor.findMatchHighlightBackground": "#0b790e97",
         "editor.selectionForeground": "#99eeff",
     },
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
+    "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.tabSize": 2,
-    "editor.quickSuggestions": false,
+    "editor.scrollBeyondLastLine": false,
     "editor.parameterHints.enabled": false,
-    "workbench.view.experimental.allowMovingToNewContainer": true,
-    "multiCommand.commands": [
-        {
-            "command": "multiCommand.openInEditor",
-            "sequence": [
-                "explorer.openToSide",
-                "workbench.action.moveEditorToPreviousGroup"
-            ]
-        },
-        {
-            "command": "multiCommand.jumpActivate",
-            "sequence": [
-                "type"
-            ]
-        }
-    ],
-    // "workbench.editor.enablePreview": false,
-    // "files.associations": {
-    //     "*.tsx": "typescriptreact",
-    //     "*.jsx": "javascriptreact"
-    // },
     "editor.minimap.enabled": false,
     "prettier.jsxBracketSameLine": true,
     "prettier.jsxSingleQuote": true,
@@ -45,6 +23,7 @@
     "prettier.tabWidth": 2,
     "prettier.printWidth": 100,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.matchBrackets": "never",
     "workbench.editor.showTabs": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
@@ -75,24 +54,46 @@
     "sync.autoDownload": true,
     "sync.autoUpload": true,
     "macros.list": {
-        "selectInnerDblQuotes": [
-            {"command": "type", "args": {"text": "s"}},
+        "leftOneWord": [
+            {"command": "type", "args": {"text": "b"}}
+        ],
+        "rightOneWord": [
+            {"command": "type", "args": {"text": "e"}}
+        ],
+        "moveSelectDown": [
+            {"command": "type", "args": {"text": "y']p']"}},
+        ],
+        "moveSelectUp": [
+            {"command": "type", "args": {"text": "ykp"}},
+        ],
+        "selectTilLineEnd": [
+            {"command": "type", "args": {"text": "v$h"}},
+        ],
+        "selectPreviousChunk": [
+            {"command": "type", "args": {"text": "BBviW"}},
+        ],
+        "selectNextChunk": [
+            {"command": "type", "args": {"text": "BBviW"}},
+        ],
+        "selectAll": [
+            {"command": "type", "args": {"text": "ggVG"}},
+        ],
+        "copySelectedToClipboard": [
+            {"command": "type", "args": {"text": "\"+y"}},
+        ],
+        "moveLineDown": [
+            {"command": "type", "args": {"text": ":'<,'> move +2<Enter>"}}
+        ],
+        "moveLineUp": [
+            {"command": "type", "args": {"text": ":'<,'> move -2<Enter>"}}
+        ],
+        "iMoveDown": [
             {"command": "type", "args": {"text": "i"}},
-            {"command": "type", "args": {"text": "\""}},
+            "editor.action.moveLinesDownAction"
         ],
-        "deleter": [
-            {"command": "settings.cycle.delete",},
-            {"command": "type", "args": {"text": "d"}}
-        ],
-        "jumpActivate": [
-            {"command": "type", "args": {"text": "i"}},
-            "findJump.activate",
-        ],
-        "jumpSelectActivate": [
-            {"command": "type", "args": {"text": "i"}},
-            "findJump.activateWithSelection",
-            {"command": "type", "args": {"text": "v"}},
-        ],
+        "comment": [
+            {"command": "type", "args": {"text": "gcc"}}
+        ]
 
     },
     "settings.cycle": [{
@@ -185,7 +186,6 @@
     ]
 },
 "diffEditor.renderSideBySide": true,
-"vsnotes.defaultNotePath": "/Users/brent.whitehead/Documents",
 "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
 },
@@ -195,14 +195,12 @@
     "workbench.action.debug.start",
     "workbench.action.debug.run"
 ],
-"touchBar.showActivityBar": true,
-"touchBar.rename": false,
-"touchBar.copyLinesDownAction": false,
-"touchBar.organizeImports": true,
-"touchBar.toggleZenMode": true,
-"touchBar.extensions": false,
-"touchBar.closeOtherEditors": false,
-"touchBar.terminal": true,
 "workbench.activityBar.visible": false,
-"typescript.updateImportsOnFileMove.enabled": "always"
+"typescript.updateImportsOnFileMove.enabled": "always",
+"vscode-neovim.neovimInitPath": "/Users/brent.whitehead/.vim/vim.init",
+"vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+"editor.cursorBlinking": "smooth",
+"editor.multiCursorMergeOverlapping": true,
+"terminal.integrated.rendererType": "dom",
+"workbench.colorTheme": "One Monokai",
 }
