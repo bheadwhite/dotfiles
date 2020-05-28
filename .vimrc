@@ -1,4 +1,3 @@
-
 syntax enable on
 
 set tabstop=2 softtabstop=2
@@ -26,13 +25,14 @@ set splitbelow
 set noea
 set colorcolumn=100
 set eadirection=ver
-set clipboard=unnamed        " Yank and paste with the system clipboard
+set clipboard=unnamedplus        " Yank and paste with the system clipboard
 highlight ColorColumn ctermbg=8
 set guifont=Menlo\ Regular:h17
 set timeoutlen=1000 ttimeoutlen=0
 set mouse=a
 set undodir=~/.vim/undodir"
 set undofile
+set t_Co=256
 
 "colors
 if (has("termguicolors"))
@@ -119,6 +119,9 @@ colorscheme onedark
 
 set background=dark
 
+let g:netrw_browse_split = 2
+let g:netrw_winsize = 25
+
 " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_
@@ -141,8 +144,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-nnoremap <D-l> $
-nnoremap <D-h> ^
+nnoremap L $
+nnoremap H ^
 nnoremap ˙ b
 nnoremap ¬ e
 
@@ -154,7 +157,7 @@ inoremap <D-l> <C-o>a
 inoremap <d-h> <C-o>i
 
 " saving
-map <D-s> :w <bar> :!echo "saved"<CR>
+"map <D-s> :w <bar> :!echo saved"<CR>
 
 " resizing windows
 nnoremap <Leader>= :vertical resize +5<CR>
@@ -162,6 +165,8 @@ nnoremap <Leader>- :vertical resize -5<CR>
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+inoremap <D-s> :echo "test"<CR>
 
 " nerdtree
 map <leader>k :NERDTreeToggle<CR>
@@ -188,9 +193,10 @@ map <leader>u :UndotreeToggle<CR>
 
 " fzf
 "nnoremap <D-p> :call fzf#run(fzf#wrap({'source': 'fd --type f --follow --exclude .git'}))<CR>
-nnoremap <D-p> :GFiles<CR>
-nnoremap <D-f> :BLines<CR>
+nnoremap <C-p> :GFiles<CR>
+nnoremap <C-f> :BLines<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>` :e ~/.config/nvim/init.vim<CR>
 map <silent> <leader>m :History<CR>
 
 "COC
