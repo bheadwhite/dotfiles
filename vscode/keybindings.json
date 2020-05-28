@@ -955,7 +955,7 @@
     "when": "neovim.mode == normal && !listFocus"
   },
   {
-   "key": "alt+h",
+    "key": "alt+h",
     "command": "macros.leftOneWord",
     "when": "neovim.mode == normal && !listFocus"
   },
@@ -969,7 +969,7 @@
   },
   {
     "key": "shift+s",
-    "command":"macros.selectTilLineEnd",
+    "command": "macros.selectTilLineEnd",
     "when": "neovim.mode == normal && editorFocus"
   },
   {
@@ -979,7 +979,7 @@
   },
   {
     "key": "cmd+a",
-    "command": "macros.selectAll",
+    "command": "macros.selectAll"
   },
   {
     "key": "ctrl+shift+alt+cmd+enter",
@@ -990,7 +990,8 @@
     "key": "cmd+c",
     "command": "macros.copySelectedToClipboard"
   },
-  { //move lines down
+  {
+    //move lines down
     "key": "alt+shift+j",
     "command": "vscode-neovim.send",
     "when": "neovim.mode == visual",
@@ -1014,240 +1015,242 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   // {
-    // "key": "ctrl+j",
-    // "command": "vscode-neovim.send",
-    // "args": "<S-F3>"
+  // "key": "ctrl+j",
+  // "command": "vscode-neovim.send",
+  // "args": "<S-F3>"
   // },
   // {
-    // "key": "ctrl+k",
-    // "command": "vscode-neovim.send",
-    // "args": "<F3>",
-    // "when": "neovim.mode == normal"
-    {
-      "key": "cmd+q",
-      "command": "outdent",
-      "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && neovim.mode != visual"
-    },
-    {
-      "key": "cmd+q",
-      "command": "vscode-neovim.send",
-      "when": "neovim.mode == visual && !editorTabMovesFocus",
-      "args": "<S-F4>"
-    },
-    {
-      "key": "cmd+r",
-      "command": "vscode-neovim.send",
-      "when": "neovim.mode == visual && !editorTabMovesFocus",
-      "args": "<F4>"
-    },
-    {
-      "key": "cmd+r",
-      "command": "editor.action.indentLines",
-      "when": "editorTextFocus && !editorReadonly && neovim.mode != visual"
-    },
-    {
-      "key": "ctrl+p",
-      "command": "vscode-neovim.send",
-      "when": "neovim.mode == visual",
-      "args": "<F4>"
-    },
-    {
-      "key": "shift+alt+j",
-      "command": "editor.action.copyLinesDownAction",
-      "when": "neovim.mode == 'normal' && !listFocus"
-    },
-    {
-      "key": "shift+alt+k",
-      "command": "editor.action.copyLinesUpAction",
-      "when": "neovim.mode == 'normal' && !listFocus"
-    }, {
-      "key": "cmd+/",
-      "command": "macros.comment"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+d",
-      "command": "editor.debug.action.toggleBreakpoint",
-      "when": "editorTextFocus"
-    },
-    {
-      "key": "f9",
-      "command": "-editor.debug.action.toggleBreakpoint",
-      "when": "editorTextFocus"
-    },
-    {
-      "key": "cmd+\\",
-      "command": "workbench.action.debug.continue",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "f5",
-      "command": "-workbench.action.debug.continue",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "cmd+'",
-      "command": "workbench.action.debug.stepOver",
-      "when": "debugState == 'stopped'"
-    },
-    {
-      "key": "f10",
-      "command": "-workbench.action.debug.stepOver",
-      "when": "debugState == 'stopped'"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+r",
-      "command": "workbench.action.debug.restart",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "shift+cmd+f5",
-      "command": "-workbench.action.debug.restart",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "shift+cmd+d",
-      "command": "workbench.action.debug.start",
-      "when": "activeViewlet == workbench.view.debug"
-    },
-    {
-      "key": "f5",
-      "command": "-workbench.action.debug.start",
-      "when": "!inDebugMode"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+s",
-      "command": "workbench.action.debug.stop",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "shift+f5",
-      "command": "-workbench.action.debug.stop",
-      "when": "inDebugMode"
-    },
-    {
-      "key": "ctrl+`",
-      "command": "workbench.action.closePanel",
-      "when": "activeViewlet == workbench.view.terminal"
-    },
-    {
-      "key": "cmd+o",
-      "command": "workbench.action.debug.stepOut",
-      "when": "debugState == 'stopped'"
-    },
-    {
-      "key": "shift+f11",
-      "command": "-workbench.action.debug.stepOut",
-      "when": "debugState == 'stopped'"
-    },
-    {
-      "key": "cmd+i",
-      "command": "workbench.action.debug.stepInto",
-      "when": "debugState != 'inactive'"
-    },
-    {
-      "key": "f11",
-      "command": "-workbench.action.debug.stepInto",
-      "when": "debugState != 'inactive'"
-    },
-    {
-      "key": "ctrl+p",
-      "command": "vscode-neovim.send",
-      "args": "<F5>"
-    },
-    {
-      "key": "shift+cmd+-",
-      "command": "workbench.action.decreaseViewSize"
-    },
-    {
-      "key": "shift+cmd+=",
-      "command": "workbench.action.increaseViewSize"
-    },
-    {
-      "key": "enter",
-      "command": "list.select",
-      "when": "!editorTextFocus && listFocus"
-    },
-    {
-      "key": "cmd+`",
-      "command": "workbench.action.focusPanel"
-    },
-    {
-      "key": "cmd+`",
-      "command": "workbench.action.focusFirstEditorGroup",
-      "when": "panelFocus"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+h",
-      "command": "workbench.action.previousPanelView",
-      "when": "panelFocus"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+l",
-      "command": "workbench.action.nextPanelView",
-      "when": "panelFocus"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+-",
-      "command": "vscode-neovim.send",
-      "when": "neovim.mode == visual",
-      "args": "<S-F5>"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+=",
-      "command": "vscode-neovim.send",
-      "when": "neovim.mode == visual",
-      "args": "<F5>"
-    },
-    {
-      "key": "l",
-      "command": "cursorRight",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "h",
-      "command": "cursorLeft",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "k",
-      "command": "cursorUp",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "j",
-      "command": "cursorDown",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "shift+l",
-      "command": "cursorColumnSelectRight",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "shift+h",
-      "command": "cursorColumnSelectLeft",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "shift+k",
-      "command": "cursorColumnSelectUp",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "shift+j",
-      "command": "cursorColumnSelectDown",
-      "when": "editorReadonly"
-    },
-    {
-      "key": "ctrl+shift+alt+cmd+r",
-      "command": "workbench.files.action.refreshFilesExplorer",
-      "when": "explorerViewletFocus"
-    },
-    {
-      "command": "vscode-neovim.compositeEscape1",
-      "key": "j",
-      "when": "neovim.mode == insert",
-      "args": "j"
+  // "key": "ctrl+k",
+  // "command": "vscode-neovim.send",
+  // "args": "<F3>",
+  // "when": "neovim.mode == normal"
+  {
+    "key": "cmd+q",
+    "command": "outdent",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && neovim.mode != visual"
+  },
+  {
+    "key": "cmd+q",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode == visual && !editorTabMovesFocus",
+    "args": "<S-F4>"
+  },
+  {
+    "key": "cmd+r",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode == visual && !editorTabMovesFocus",
+    "args": "<F4>"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly && neovim.mode != visual"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode == visual",
+    "args": "<F4>"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "neovim.mode == 'normal' && !listFocus"
+  },
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "neovim.mode == 'normal' && !listFocus"
+  },
+  {
+    "key": "cmd+/",
+    "command": "macros.comment",
+    "when": "neovim.mode != insert"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+d",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "f9",
+    "command": "-editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "cmd+'",
+    "command": "workbench.action.debug.stepOver",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "f10",
+    "command": "-workbench.action.debug.stepOver",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+r",
+    "command": "workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "shift+cmd+f5",
+    "command": "-workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "workbench.action.debug.start",
+    "when": "activeViewlet == workbench.view.debug"
+  },
+  {
+    "key": "f5",
+    "command": "-workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+s",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "shift+f5",
+    "command": "-workbench.action.debug.stop",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.closePanel",
+    "when": "activeViewlet == workbench.view.terminal"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.debug.stepOut",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "shift+f11",
+    "command": "-workbench.action.debug.stepOut",
+    "when": "debugState == 'stopped'"
+  },
+  {
+    "key": "cmd+i",
+    "command": "workbench.action.debug.stepInto",
+    "when": "debugState != 'inactive'"
+  },
+  {
+    "key": "f11",
+    "command": "-workbench.action.debug.stepInto",
+    "when": "debugState != 'inactive'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "vscode-neovim.send",
+    "args": "<F5>"
+  },
+  {
+    "key": "shift+cmd+-",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "shift+cmd+=",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "!editorTextFocus && listFocus"
+  },
+  {
+    "key": "cmd+`",
+    "command": "workbench.action.focusPanel"
+  },
+  {
+    "key": "cmd+`",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+h",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+l",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+-",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode == visual",
+    "args": "<S-F5>"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+=",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode == visual",
+    "args": "<F5>"
+  },
+  {
+    "key": "l",
+    "command": "cursorRight",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "h",
+    "command": "cursorLeft",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "k",
+    "command": "cursorUp",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "j",
+    "command": "cursorDown",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "shift+l",
+    "command": "cursorColumnSelectRight",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "shift+h",
+    "command": "cursorColumnSelectLeft",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "shift+k",
+    "command": "cursorColumnSelectUp",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "shift+j",
+    "command": "cursorColumnSelectDown",
+    "when": "editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+cmd+r",
+    "command": "workbench.files.action.refreshFilesExplorer",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "vscode-neovim.compositeEscape1",
+    "key": "j",
+    "when": "neovim.mode == insert",
+    "args": "j"
   },
   {
     "command": "vscode-neovim.compositeEscape2",
@@ -1257,11 +1260,70 @@
   },
   {
     "key": "ctrl+c",
-    "command": "editor.action.clipboardCopyAction",
+    "command": "editor.action.clipboardCopyAction"
   },
   {
     "key": "tab",
     "command": "-acceptSelectedSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
-  }, 
+  },
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
+  },
+  {
+    "key": "cmd+e",
+    "command": "type",
+    "args": { "text": "viw" },
+    "when": "neovim.mode == normal"
+  },
+  {
+    "key": "cmd+e",
+    "command": "type",
+    "args": { "text": "<esc>#viw" },
+    "when": "neovim.mode == visual"
+  },
+  {
+    "key": "cmd+g",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+g",
+    "command": "type",
+    "args": { "text": "<esc>*viw" },
+    "when": "neovim.mode == visual"
+  },
+  {
+    "key": "cmd+z",
+    "command": "undo",
+    "when": "textInputFocus && !editorReadonly && neovim.mode == insert"
+  },
+  {
+    "key": "cmd+z",
+    "command": "type",
+    "args": { "text": "u" },
+    "when": "textInputFocus && !editorReadonly && neovim.mode != insert"
+  },
+  {
+    "key": "cmd+f",
+    "command": "-actions.find"
+  },
+  {
+    "key": "cmd+f",
+    "command": "fuzzySearch.activeTextEditor"
+  },
+  {
+    "key": "cmd+c",
+    "command": "editor.action.clipboardCopyAction"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-editor.action.clipboardCopyAction",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "workbench.view.extension.liveshare"
+  }
 ]
