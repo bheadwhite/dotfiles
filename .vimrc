@@ -30,8 +30,8 @@ Plug 'sheerun/vim-polyglot'
 
 "Plug 'vim-utils/vim-man'
 
-Plug 'junegunn/fzf', {'do': { -> fzf#install() }} "fuzzy finder
-Plug 'junegunn/fzf.vim' "fuzzy finder
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 
@@ -51,8 +51,7 @@ Plug 'ap/vim-css-color'
 Plug 'yuttie/comfortable-motion.vim'
 Plug 'mhinz/vim-startify'
 Plug 'wesQ3/vim-windowswap'
-
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 "performance
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} "async lib
@@ -85,7 +84,7 @@ set guifont=Menlo\ Regular:h17
 set timeoutlen=1000 ttimeoutlen=0
 set mouse=a
 set backspace=indent,eol,start
-syntax on
+syntax enable on
 
 let mapleader = " "
 
@@ -93,6 +92,10 @@ let mapleader = " "
 if (has("termguicolors"))
   set termguicolors
 endif
+
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+  \ }
 
 set background=dark
 
