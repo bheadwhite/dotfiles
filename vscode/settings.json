@@ -178,7 +178,7 @@
   ],
   "workbench.activityBar.visible": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "vscode-neovim.neovimInitPath": "/Users/brent.whitehead/.vim/vim.init",
+  "vscode-neovim.neovimInitPath": "/Users/brent.whitehead/Desktop/code/dotfiles/init.vim",
   "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
   "editor.cursorBlinking": "smooth",
   "editor.multiCursorMergeOverlapping": true,

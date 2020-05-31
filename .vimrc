@@ -3,8 +3,8 @@ syntax enable on
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
-set guicursor=
 set noshowmatch
+set lz
 set relativenumber
 set nohlsearch
 set hidden
@@ -13,9 +13,11 @@ set noerrorbells visualbell t_vb=
 set expandtab
 set smartindent
 set nu noswf
+set cul
 set nowrap
 set smartcase
 set nobackup
+set autoread<
 set smarttab
 set incsearch
 set splitright
@@ -25,7 +27,6 @@ set splitbelow
 set noea
 set colorcolumn=100
 set eadirection=ver
-set clipboard=unnamedplus        " Yank and paste with the system clipboard
 highlight ColorColumn ctermbg=8
 set guifont=Menlo\ Regular:h17
 set timeoutlen=1000 ttimeoutlen=0
@@ -56,7 +57,7 @@ call plug#begin()
 Plug 'joshdick/onedark.vim'
 "Plug 'morhetz/gruvbox'
 "Plug 'dikiaap/minimalist' "color scheme
-Plug 'tyrannicaltoucan/vim-quantum'
+"Plug 'tyrannicaltoucan/vim-quantum'
 "Plug 'Brettm12345/moonlight.vim'
 "Plug 'sainnhe/sonokai'
 
@@ -68,34 +69,37 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-surround'
 "Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'raimondi/delimitmate'
-Plug 'tpope/vim-repeat'
+"Plug 'tpope/vim-repeat'
 Plug 'mbbill/undotree'
 
 " git
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim' "git looking at commit browser
+"Plug 'junegunn/gv.vim' "git looking at commit browser
 Plug 'airblade/vim-gitgutter'
 
 " Syntax Highlighting
-"Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'sheerun/vim-polyglot'
 
 "Plug 'vim-utils/vim-man'
 
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
-Plug 'mileszs/ack.vim'
+"Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 
 "Plug 'vim-scripts/xptemplate' "code snippet engine
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdtree'
 "Plug 'gcmt/taboo.vim'
 Plug 'w0rp/ale'
-Plug 'Valloric/MatchTagAlways'
-Plug 'ntpeters/vim-better-whitespace'
+"Plug 'Valloric/MatchTagAlways'
+"Plug 'ntpeters/vim-better-whitespace'
 Plug 'fatih/vim-go'
 "Plug 'ejholmes/vim-forcedotcom'
 "Plug 'SirVer/ultisnips'
@@ -104,12 +108,11 @@ Plug 'airblade/vim-rooter'
 Plug 'ap/vim-css-color'
 "Plug 'yuttie/comfortable-motion.vim'
 "Plug 'mhinz/vim-startify'
-Plug 'wesQ3/vim-windowswap'
+"Plug 'wesQ3/vim-windowswap'
 "Plug ''
 Plug 'itchyny/lightline.vim'
-
 "performance
-Plug 'Shougo/vimproc.vim', {'do' : 'make'} "async lib
+"Plug 'Shougo/vimproc.vim', {'do' : 'make'} "async lib
 
 call plug#end()
 
@@ -146,8 +149,8 @@ nnoremap <C-H> <C-W><C-H>
 
 nnoremap L $
 nnoremap H ^
-nnoremap ˙ b
-nnoremap ¬ e
+nnoremap <M-h> b
+nnoremap <M-l> e
 
 map <D-w> :q<CR>
 
@@ -155,6 +158,8 @@ nnoremap <D-L> <C-W>L
 nnoremap <D-H> <C-W>H
 inoremap <D-l> <C-o>a
 inoremap <d-h> <C-o>i
+
+map <Leader>v :vsp <bar> wincmd =<CR>
 
 " saving
 "map <D-s> :w <bar> :!echo saved"<CR>
@@ -173,23 +178,7 @@ map <leader>k :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<CR>
 
 " undo tree
-
 map <leader>u :UndotreeToggle<CR>
-
-" ycm
-"let g:ycm_min_num_of_chars_for_completion = 2
-"let g:ycm_auto_hover = ''
-"let g:ycm_key_list_select_completion = ['∆', '<TAB>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['˚', '<S-TAB>', '<Up>']
-"let g:ycm_use_ultisnips_completer = 0
-"nnoremap gd :YcmCompleter GoTo<CR>
-"nnoremap gt :YcmCompleter GoToType<CR>
-"nnoremap <D-k>i :YcmCompleter GetDoc<CR>
-"nnoremap gr :YcmCompleter GoToReferences<CR>
-"nnoremap go :YcmCompleter OrganizeImports<CR>
-"nnoremap <Leader>rm :YcmCompleter RefactorRename<CR>
-
-"nmap <D-i> <plug>(YCMHover)
 
 " fzf
 "nnoremap <D-p> :call fzf#run(fzf#wrap({'source': 'fd --type f --follow --exclude .git'}))<CR>
@@ -199,7 +188,7 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>` :e ~/.config/nvim/init.vim<CR>
 map <silent> <leader>m :History<CR>
 
-"COC
+" COC
  " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gy <Plug>(coc-type-definition)
@@ -210,10 +199,14 @@ nmap <leader>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next)
-nnoremap <leader>cr :CocRestart
+
+nmap <silent> <leader>g <Plug>(coc-diagnostic-next)
+
+nnoremap <leader>cf :CocFix<CR>
+nnoremap <leader>cr :CocRestart<CR>
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :<C-u>call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -239,6 +232,18 @@ endfunction
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
+
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#util#has_float() == 0)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+nnoremap <silent> <M-i> :<C-u>call <SID>show_hover_doc()<CR>
 
 " fugitive git options
 set diffopt+=vertical
@@ -269,6 +274,9 @@ fun! TrimWhitespace()
 endfun
 
 autocmd BufWritePre * :call TrimWhitespace()
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
