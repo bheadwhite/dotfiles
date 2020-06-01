@@ -1,36 +1,14 @@
 syntax enable on
 
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=2 softtabstop=2 shiftwidth=2
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
-set noshowmatch
-set lz
-set relativenumber
-set nohlsearch
-set hidden
-set ignorecase
-set noerrorbells visualbell t_vb=
-set expandtab
-set smartindent
-set nu noswf
-set cul
-set nowrap
-set smartcase
-set nobackup
-set autoread<
-set smarttab
-set incsearch
-set splitright
-set diffopt+=vertical
-silent! set splitvertical
-set splitbelow
-set noea
-set colorcolumn=100
-set eadirection=ver
 highlight ColorColumn ctermbg=8
-set guifont=Menlo\ Regular:h17
 set timeoutlen=1000 ttimeoutlen=0
-set mouse=a
+set ignorecase smartcase
+set noerrorbells visualbell t_vb=
+set number relativenumber cursorline nowrap lazyredraw nohlsearch
+set splitright splitbelow colorcolumn=100 equalalways eadirection=hor
+set nobackup noswf autoread< mouse=a updatetime=50
 set undodir=~/.vim/undodir"
 set undofile
 set t_Co=256
@@ -43,14 +21,7 @@ endif
 let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
-
-set cmdheight=2
-
-set updatetime=50
-
 set shortmess+=c
-
-
 call plug#begin()
 
 "colorschemes
@@ -101,7 +72,6 @@ Plug 'w0rp/ale'
 "Plug 'Valloric/MatchTagAlways'
 "Plug 'ntpeters/vim-better-whitespace'
 Plug 'fatih/vim-go'
-"Plug 'ejholmes/vim-forcedotcom'
 "Plug 'SirVer/ultisnips'
 "Plug 'honza/vim-snippets'
 Plug 'airblade/vim-rooter'
@@ -109,10 +79,7 @@ Plug 'ap/vim-css-color'
 "Plug 'yuttie/comfortable-motion.vim'
 "Plug 'mhinz/vim-startify'
 "Plug 'wesQ3/vim-windowswap'
-"Plug ''
 Plug 'itchyny/lightline.vim'
-"performance
-"Plug 'Shougo/vimproc.vim', {'do' : 'make'} "async lib
 
 call plug#end()
 
@@ -124,6 +91,9 @@ set background=dark
 
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
+let delimitMate_jump_expansion = 1
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
 
 " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -151,6 +121,8 @@ nnoremap L $
 nnoremap H ^
 nnoremap <M-h> b
 nnoremap <M-l> e
+imap <M-BS> <C-w>
+inoremap <S-TAB> <C-o>a
 
 map <D-w> :q<CR>
 
@@ -223,7 +195,7 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
