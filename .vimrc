@@ -29,7 +29,6 @@ let g:lightline = {
   \ 'colorscheme': 'onedark',
   \ }
 
-
 call plug#begin()
 
 "colorschemes
@@ -107,6 +106,9 @@ set background=dark
 
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
+let delimitMate_jump_expansion = 1
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
 
 " Copy to clipboard
 vnoremap  <leader>y  "+y
