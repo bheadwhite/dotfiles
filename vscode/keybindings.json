@@ -1306,11 +1306,7 @@
     "when": "textInputFocus && !editorReadonly && neovim.mode != insert"
   },
   {
-    "key": "cmd+f",
-    "command": "-actions.find"
-  },
-  {
-    "key": "cmd+f",
+    "key": "alt+f",
     "command": "fuzzySearch.activeTextEditor"
   },
   {

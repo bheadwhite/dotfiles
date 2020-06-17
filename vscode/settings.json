@@ -6,7 +6,6 @@
     "editor.wordHighlightStrongBackground": "#3e4998",
     "editor.wordHighlightBackground": "#3e4998",
     "editor.findMatchBackground": "#282c34",
-    "editor.findMatchBorder": "#ff0000",
     "editor.findMatchHighlightBackground": "#0b790e97",
     "editor.selectionForeground": "#99eeff"
   },
@@ -30,17 +29,53 @@
     "typescript": "typescriptreact",
     "jsx-sublime-babel-tags": "javascriptreact"
   },
-  "search.exclude": {
+  "files.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
     "**/node_modules": true,
     "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/.fdk/**": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
     "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/tmp": true,
-    "**/coverage": true,
-    "**/ios": true,
-    "**/android": true,
-    "_build": true,
-    "deps": true
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true,
+    "**/logs/**": true,
+    "**/.fdk/**": true
+  },
+  "search.exclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist/**": true,
+    "**/log/**": true
   },
   "editor.formatOnSave": true,
   "git.autofetch": true,
@@ -73,19 +108,9 @@
     "nextSearchedItem": [
       { "command": "editor.action.nextMatchFindAction" },
       { "command": "type", "args": { "text": "i<esc>" } }
-    ]
+    ],
+    "openToTheSide": [{ "command": "editor.action.revealDefinition" }]
   },
-  "settings.cycle": [
-    {
-      "id": "delete",
-      "overrideWorkspaceSettings": true,
-      "values": [
-        {
-          "titleBar.activeBackground": "#ff0000"
-        }
-      ]
-    }
-  ],
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -183,6 +208,7 @@
   "editor.cursorBlinking": "smooth",
   "editor.multiCursorMergeOverlapping": true,
   "terminal.integrated.rendererType": "dom",
-  "workbench.colorTheme": "Moonlight II",
-  "liveshare.audio.joinCallBehavior": "accept"
+  "workbench.colorTheme": "Moonlight II Italic",
+  "liveshare.audio.joinCallBehavior": "accept",
+  "workbench.startupEditor": "newUntitledFile"
 }
