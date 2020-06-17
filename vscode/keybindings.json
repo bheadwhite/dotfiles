@@ -991,13 +991,6 @@
     "command": "macros.copySelectedToClipboard"
   },
   {
-    //move lines down
-    "key": "alt+shift+j",
-    "command": "vscode-neovim.send",
-    "when": "neovim.mode == visual",
-    "args": "<S-F2>"
-  },
-  {
     //move lines up
     "key": "alt+shift+k",
     "command": "vscode-neovim.send",
@@ -1055,17 +1048,12 @@
   {
     "key": "shift+alt+j",
     "command": "editor.action.copyLinesDownAction",
-    "when": "neovim.mode == 'normal' && !listFocus"
+    "when": "!listFocus"
   },
   {
     "key": "shift+alt+k",
     "command": "editor.action.copyLinesUpAction",
     "when": "neovim.mode == 'normal' && !listFocus"
-  },
-  {
-    "key": "cmd+/",
-    "command": "macros.comment",
-    "when": "neovim.mode != insert"
   },
   {
     "key": "ctrl+shift+alt+cmd+d",
