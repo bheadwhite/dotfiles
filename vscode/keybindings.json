@@ -8,19 +8,9 @@
     "command": "-workbench.action.quit"
   },
   {
-    "key": "cmd+q",
-    "command": "outdent",
-    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && neovim.mode != visual"
-  },
-  {
     "key": "shift+tab",
     "command": "-outdent",
     "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-  },
-  {
-    "key": "cmd+r",
-    "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly && neovim.mode != visual''"
   },
   {
     "key": "cmd+]",
@@ -455,7 +445,7 @@
   {
     "key": "ctrl+j",
     "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !listFocus && neovim.mode == normal"
+    "when": "editorTextFocus && !listFocus"
   },
   {
     "key": "alt+k",
@@ -504,7 +494,7 @@
   {
     "key": "enter",
     "command": "workbench.action.keepEditor",
-    "when": "!editorPinned && neovim.mode == 'normal' && editorFocus"
+    "when": "editorFocus && !editorPinned"
   },
   {
     "key": "shift+cmd+d",
@@ -620,7 +610,7 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+,",
     "command": "workbench.action.moveEditorLeftInGroup"
   },
   {
@@ -863,7 +853,7 @@
   {
     "key": "ctrl+k",
     "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !listFocus && neovim.mode == normal"
+    "when": "editorTextFocus && !listFocus"
   },
   {
     "command": "breadcrumbs.focusAndSelect",
@@ -871,7 +861,7 @@
     "when": "breadcrumbsPossible && editorTextFocus && !extension.simpleVim.visualLineMode && !extension.simpleVim.visualMode && !suggestWidgetVisible"
   },
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+.",
     "command": "workbench.action.moveEditorRightInGroup"
   },
   {
@@ -926,21 +916,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+alt+cmd+j",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus && extension.simpleVim.visualMode"
-  },
-  {
-    "key": "ctrl+shift+cmd+left",
-    "command": "-editor.action.smartSelect.shrink",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+alt+cmd+j",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus && extension.simpleVim.visualLineMode"
-  },
-  {
     "key": "ctrl+shift+alt+cmd+k",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus && extension.simpleVim.visualLineMode"
@@ -948,34 +923,6 @@
   {
     "key": "ctrl+alt+cmd+r",
     "command": "surround.with.region"
-  },
-  {
-    "key": "alt+l",
-    "command": "macros.rightOneWord",
-    "when": "neovim.mode == normal && !listFocus"
-  },
-  {
-    "key": "alt+h",
-    "command": "macros.leftOneWord",
-    "when": "neovim.mode == normal && !listFocus"
-  },
-  {
-    "key": "s",
-    "command": "type",
-    "args": {
-      "text": ""
-    },
-    "when": "neovim.mode == visual && editorFocus"
-  },
-  {
-    "key": "shift+s",
-    "command": "macros.selectTilLineEnd",
-    "when": "neovim.mode == normal && editorFocus"
-  },
-  {
-    "key": "cmd+shift+h",
-    "command": "macros.selectPreviousChunk",
-    "when": "neovim.mode == normal"
   },
   {
     "key": "cmd+a",
@@ -987,20 +934,11 @@
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
   {
-    "key": "cmd+c",
-    "command": "macros.copySelectedToClipboard"
-  },
-  {
     //move lines up
     "key": "alt+shift+k",
     "command": "vscode-neovim.send",
     "when": "neovim.mode == visual",
     "args": "<F2>"
-  },
-  {
-    "key": "alt+k",
-    "command": "macros.moveLineUp",
-    "when": "neovim.mode == visual"
   },
   {
     "key": "enter",
@@ -1018,28 +956,6 @@
   // "args": "<F3>",
   // "when": "neovim.mode == normal"
   {
-    "key": "cmd+q",
-    "command": "outdent",
-    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && neovim.mode != visual"
-  },
-  {
-    "key": "cmd+q",
-    "command": "vscode-neovim.send",
-    "when": "neovim.mode == visual && !editorTabMovesFocus",
-    "args": "<S-F4>"
-  },
-  {
-    "key": "cmd+r",
-    "command": "vscode-neovim.send",
-    "when": "neovim.mode == visual && !editorTabMovesFocus",
-    "args": "<F4>"
-  },
-  {
-    "key": "cmd+r",
-    "command": "editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly && neovim.mode != visual"
-  },
-  {
     "key": "ctrl+p",
     "command": "vscode-neovim.send",
     "when": "neovim.mode == visual",
@@ -1049,11 +965,6 @@
     "key": "shift+alt+j",
     "command": "editor.action.copyLinesDownAction",
     "when": "!listFocus"
-  },
-  {
-    "key": "shift+alt+k",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "neovim.mode == 'normal' && !listFocus"
   },
   {
     "key": "ctrl+shift+alt+cmd+d",
@@ -1235,79 +1146,87 @@
     "when": "explorerViewletFocus"
   },
   {
-    "command": "vscode-neovim.compositeEscape1",
-    "key": "j",
-    "when": "neovim.mode == insert",
-    "args": "j"
-  },
-  {
-    "command": "vscode-neovim.compositeEscape2",
-    "key": "k",
-    "when": "neovim.mode == insert",
-    "args": "k"
-  },
-  {
-    "key": "ctrl+c",
-    "command": "editor.action.clipboardCopyAction"
-  },
-  {
     "key": "tab",
     "command": "-acceptSelectedSuggestion",
     "when": "suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "cmd+e",
-    "command": "-actions.findWithSelection"
-  },
-  {
-    "key": "cmd+e",
-    "command": "type",
-    "args": { "text": "viw" },
-    "when": "neovim.mode == normal"
-  },
-  {
-    "key": "cmd+e",
-    "command": "type",
-    "args": { "text": "<esc>#viw" },
-    "when": "neovim.mode == visual"
-  },
-  {
-    "key": "cmd+g",
-    "command": "-editor.action.nextMatchFindAction",
-    "when": "editorFocus"
-  },
-  {
-    "key": "cmd+g",
-    "command": "type",
-    "args": { "text": "<esc>*viw" },
-    "when": "neovim.mode == visual"
-  },
-  {
-    "key": "cmd+z",
-    "command": "undo",
-    "when": "textInputFocus && !editorReadonly && neovim.mode == insert"
-  },
-  {
-    "key": "cmd+z",
-    "command": "type",
-    "args": { "text": "u" },
-    "when": "textInputFocus && !editorReadonly && neovim.mode != insert"
-  },
-  {
-    "key": "alt+f",
-    "command": "fuzzySearch.activeTextEditor"
-  },
-  {
-    "key": "cmd+c",
-    "command": "editor.action.clipboardCopyAction"
-  },
-  {
-    "key": "cmd+c",
-    "command": "-editor.action.clipboardCopyAction",
-    "when": "textInputFocus"
+    "key": "ctrl+f",
+    "command": "macros.fzyfind"
   },
   {
     "key": "shift+cmd+v",
     "command": "workbench.view.extension.liveshare"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "editsHistory.moveCursorToPreviousEdit"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-editsHistory.moveCursorToPreviousEdit"
+  },
+  {
+    "key": "cmd+o",
+    "command": "editsHistory.moveCursorToNextEdit"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-editsHistory.moveCursorToNextEdit"
+  },
+  {
+    "key": "shift+M",
+    "command": "workbench.view.extension.liveshare",
+    "when": "amVim.mode != 'INSERT' && textEditorFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "editor.action.indentLines"
+  },
+  {
+    "key": "cmd+q",
+    "command": "editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+[",
+    "command": "-editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "tab",
+    "command": "tabOutOrReindent",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !inSnippetMode"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-amVim.ctrl+f",
+    "when": "amVim.configuration.shouldBindCtrlCommands && editorTextFocus && amVim.mode != 'INSERT'"
+  },
+  {
+    "key": "s",
+    "command": "type",
+    "args": { "text": "v" },
+    "when": "amVim.mode != 'INSERT' && !findWidgetVisible && !inQuickOpen && editorFocus"
+  },
+  {
+    "key": "shift+s",
+    "command": "cursorEndSelect",
+    "when": "amVim.mode != 'INSERT' && !findWidgetVisible && !inQuickOpen && editorFocus"
+  },
+  {
+    "key": "shift+l",
+    "command": "workbench.action.editor.nextChange",
+    "when": "amVim.mode != 'INSERT' && !findWidgetVisible && !inQuickOpen && editorFocus"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.editor.previousChange",
+    "when": "amVim.mode != 'INSERT' && !findWidgetVisible && !inQuickOpen && editorFocus"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.editor.nextChange",
+    "when": "editorTextFocus"
   }
 ]

@@ -1,4 +1,10 @@
 {
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "window.zoomLevel": 2,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#ffffff23",
@@ -10,11 +16,8 @@
     "editor.selectionForeground": "#99eeff"
   },
   "terminal.integrated.shell.osx": "/bin/zsh",
-  "window.zoomLevel": 1,
-  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.tabSize": 2,
   "editor.scrollBeyondLastLine": false,
-  "editor.parameterHints.enabled": false,
   "editor.minimap.enabled": false,
   "prettier.jsxBracketSameLine": true,
   "prettier.jsxSingleQuote": true,
@@ -29,21 +32,52 @@
     "typescript": "typescriptreact",
     "jsx-sublime-babel-tags": "javascriptreact"
   },
+  "diffEditor.renderSideBySide": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "scoper.highlightColor": "",
+  "keyboard.touchbar.ignored": [
+    "play",
+    "workbench.action.debug.start",
+    "workbench.action.debug.run"
+  ],
+  "workbench.activityBar.visible": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.cursorBlinking": "smooth",
+  "editor.multiCursorMergeOverlapping": true,
+  "terminal.integrated.rendererType": "dom",
+  "workbench.startupEditor": "newUntitledFile",
+  "openInGitHub.defaultBranch": "master",
+  "openInGitHub.defaultRemote": "origin",
+  "synthwave84.disableGlow": true,
+  "workbench.colorCustomizations": {
+    "[Night Owl]": {
+      // "editor.background": "#000"
+    }
+  },
+  "synthwave84.brightness": 0.1,
+  "openInGithub.maxBuffer": 512000,
+  "openInGitHub.providerType": "gitlab",
+  "openInGitHub.excludeCurrentRevision": false,
   "files.exclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true,
+    "**/*.js": { "when": "$(basename).ts" },
+    // "**/node_modules/**": true,
+    // "**/tmp/**": true,
     "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
+    // "**/.svn": true,
+    // "**/.hg": true,
+    // "**/CVS": true,
     "**/.DS_Store": true,
     "**/node_modules": true,
     "**/bower_components": true,
     "**/dist/**": true,
-    "**/log/**": true,
-    "**/.fdk/**": true
+    "report*": true,
+    // "**/log/**": true,
+    // "**/.fdk/**": true
+    "**/.cache/**": true
   },
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -60,7 +94,9 @@
     "**/dist/**": true,
     "**/log/**": true,
     "**/logs/**": true,
-    "**/.fdk/**": true
+    "**/.fdk/**": true,
+    "**/public/**": true,
+    "**/.cache/**": true
   },
   "search.exclude": {
     "**/.git/objects/**": true,
@@ -80,14 +116,8 @@
   "editor.formatOnSave": true,
   "git.autofetch": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "go.formatTool": "goimports",
-  "go.useLanguageServer": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "sync.autoDownload": true,
-  "sync.autoUpload": true,
   "macros.list": {
     "leftOneWord": [{ "command": "type", "args": { "text": "b" } }],
     "rightOneWord": [{ "command": "type", "args": { "text": "e" } }],
@@ -103,6 +133,11 @@
     "iMoveDown": [
       { "command": "type", "args": { "text": "i" } },
       "editor.action.moveLinesDownAction"
+    ],
+    "fzyfind": [
+      "editor.action.clipboardCopyAction",
+      "fuzzySearch.activeTextEditor",
+      "editor.action.clipboardPasteAction"
     ],
     "comment": [{ "command": "type", "args": { "text": "gcc" } }],
     "nextSearchedItem": [
@@ -191,24 +226,11 @@
       }
     ]
   },
-  "diffEditor.renderSideBySide": true,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "scoper.highlightColor": "",
-  "keyboard.touchbar.ignored": [
-    "play",
-    "workbench.action.debug.start",
-    "workbench.action.debug.run"
-  ],
-  "workbench.activityBar.visible": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vscode-neovim.neovimInitPath": "/Users/brent.whitehead/Desktop/code/dotfiles/init.vim",
-  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
-  "editor.cursorBlinking": "smooth",
-  "editor.multiCursorMergeOverlapping": true,
-  "terminal.integrated.rendererType": "dom",
-  "workbench.colorTheme": "Moonlight II Italic",
-  "liveshare.audio.joinCallBehavior": "accept",
-  "workbench.startupEditor": "newUntitledFile"
+  "search.searchOnType": false,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "workbench.colorTheme": "Night Owl"
 }
+// "editor.acceptSuggestionOnCommitCharacter": false,
+// "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+// "editor.parameterHints.enabled": false,
